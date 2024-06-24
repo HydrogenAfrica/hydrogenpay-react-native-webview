@@ -91,7 +91,7 @@ export const HydrogenCheckout = forwardRef(
             onSuccess(checkPaymentStatus)
             clearInterval(checkStatus)
          }
-      }, 4000)
+      }, 1000)
 
   </script>
   </body>
