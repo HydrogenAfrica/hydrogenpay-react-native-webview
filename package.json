@@ -1,6 +1,6 @@
 {
   "name": "hydrogenpay-react-native-webview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HydrogenPay's react native webview wrapper",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace hydrodenpay-react-native-webview-example",
+    "example": "yarn workspace hydrogenpay-react-native-webview-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -35,18 +35,23 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "hydrogen",
+    "hydrogenpay",
+    "hydrogenpay-react-native",
+    "hydrogenpay-react-native-webview",
+    "react-native-webview"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HydrogenAfrica/hydrodenpay-react-native-webview.git"
+    "url": "git+https://github.com/HydrogenAfrica/hydrogenpay-react-native-webview.git"
   },
   "author": "hydrogenpay <support@hydrogenpay.com> (https://github.com/HydrogenAfrica)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HydrogenAfrica/hydrodenpay-react-native-webview/issues"
+    "url": "https://github.com/HydrogenAfrica/hydrogenpay-react-native-webview/issues"
   },
-  "homepage": "https://github.com/HydrogenAfrica/hydrodenpay-react-native-webview#readme",
+  "homepage": "https://github.com/HydrogenAfrica/hydrogenpay-react-native-webview#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
