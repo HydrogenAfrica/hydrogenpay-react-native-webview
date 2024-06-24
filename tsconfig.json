@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "hydrodenpay-react-native-webview": ["./src/index"]
+      "hydrogenpay-react-native-webview": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

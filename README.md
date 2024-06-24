@@ -11,12 +11,12 @@ Hydrogen React Native SDK allows you to accept payment using Hydrogen Pay
 Register for a merchant account on [Hydrogen Merchant Dashboard](https://dashboard.hydrogenpay.com) to get started.
 
 ```bash
-npm install --save  hydrodenpay-react-native-webview
+npm install --save  hydrogenpay-react-native-webview
 npm install react-native-webview
 ```
 
 ```bash
-yarn add hydrodenpay-react-native-webview
+yarn add hydrogenpay-react-native-webview
 yarn add react-native-webview
 ```
 
@@ -34,7 +34,7 @@ You should already have your token, If not, go to [https://dashboard.hydrogenpay
 import React, { useRef } from 'react';
 
 import { TouchableOpacity, View, Text } from 'react-native';
-import { HydrogenCheckout } from 'hydrodenpay-react-native-webview';
+import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
   const hydrogenPayRef = useRef < any > null;
@@ -83,7 +83,7 @@ export default function App() {
 import React, { useRef } from 'react';
 
 import { TouchableOpacity, View, Text } from 'react-native';
-import { HydrogenCheckout } from 'hydrodenpay-react-native-webview';
+import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
   const hydrogenPayRef = useRef < any > null;
@@ -150,7 +150,7 @@ export default function App() {
 import React, { useRef } from 'react';
 
 import { TouchableOpacity, View, Text } from 'react-native';
-import { HydrogenCheckout } from 'hydrodenpay-react-native-webview';
+import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
   const hydrogenPayRef = useRef<any>(null);

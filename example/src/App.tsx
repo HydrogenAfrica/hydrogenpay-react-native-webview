@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
-import { HydrogenCheckout } from 'hydrodenpay-react-native-webview';
+import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
   const hydrogenPayRef = useRef<any>(null);
