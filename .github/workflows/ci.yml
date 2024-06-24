@@ -1,61 +1,19 @@
-# name: CI
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-
-# jobs:
-#   lint:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-
-#       - name: Setup
-#         uses: ./.github/actions/setup
-
-#       - name: Lint files
-#         run: yarn lint
-
-#       - name: Typecheck files
-#         run: yarn typecheck
-
-#   test:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-
-#       - name: Setup
-#         uses: ./.github/actions/setup
-
-#       - name: Run unit tests
-#         run: yarn test --maxWorkers=2 --coverage
-
-#   build-library:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-
-#       - name: Setup
-#         uses: ./.github/actions/setup
-
-#       - name: Build package
-#         run: yarn prepare
-
-#   build-web:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-
-#       - name: Setup
-#         uses: ./.github/actions/setup
-
-#       - name: Build example for Web
-#         run: |
-#           yarn example expo export:web
+name: Publish to NPM
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Publish package on NPM 📦
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
