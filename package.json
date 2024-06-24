@@ -35,7 +35,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "hydrogen",
+    "hydrogenpay",
+    "hydrogenpay-react-native",
+    "hydrogenpay-react-native-webview",
+    "react-native-webview"
   ],
   "repository": {
     "type": "git",

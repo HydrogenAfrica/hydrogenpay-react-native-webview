@@ -217,12 +217,3 @@ export default function App() {
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | endDate                | `String`            | Optional | Recurring Payment end date                                |
 | autoStart              | `Boolean`            | Optional | Automatically start the sdk                               |
-
-
-
-## Contributors
-
-<span>
-   <a href="https://github.com/amoskeyz" title="amoskeyz">
-  <img src="https://github.com/amoskeyz.png?size=50">
-</a>
