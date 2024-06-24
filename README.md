@@ -216,6 +216,7 @@ export default function App() {
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | endDate                | `String`            | Optional | Recurring Payment end date                                |
+| autoStart              | `Boolean`            | Optional | Automatically start the sdk                               |
 
 
 
