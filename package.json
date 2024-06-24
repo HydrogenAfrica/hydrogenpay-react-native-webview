@@ -1,5 +1,5 @@
 {
-  "name": "@hydrogenpayment/react-native-webview",
+  "name": "hydrogenpay-react-native-webview",
   "version": "0.0.1",
   "description": "HydrogenPay's react native webview wrapper",
   "main": "lib/commonjs/index",
