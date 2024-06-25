@@ -37,7 +37,7 @@ import { TouchableOpacity, View, Text } from 'react-native';
 import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
-  const hydrogenPayRef = useRef < any > null;
+  const hydrogenPayRef = useRef(null);
 
   const onClose = (response) => {
     console.log(response);
@@ -86,7 +86,7 @@ import { TouchableOpacity, View, Text } from 'react-native';
 import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
-  const hydrogenPayRef = useRef < any > null;
+  const hydrogenPayRef = useRef(null);
 
   const startPayment = () => {
     hydrogenPayRef.current.initPayment();
@@ -153,7 +153,7 @@ import { TouchableOpacity, View, Text } from 'react-native';
 import { HydrogenCheckout } from 'hydrogenpay-react-native-webview';
 
 export default function App() {
-  const hydrogenPayRef = useRef<any>(null);
+  const hydrogenPayRef = useRef(null);
 
   const onClose = (response) => {
     console.log(response);
@@ -200,20 +200,20 @@ export default function App() {
 ## API's
 | Name                   | Type                | Required | Desc                                                      |
 | ---------------------- | ------------------- | -------- | --------------------------------------------------------- |
-| currency               | `String`            | Required | The currency for the transaction e.g NGN                  |
+| currency               | `String`            | Required | The currency for the transaction e.g NGN, USD             |
 | email                  | `String`            | Required | The email of the user to be charged                       |
-| description            | `String`            | Optional | The transaction description which is optional             |
+| description            | `String`            | Optional | The transaction description                               |
 | customerName           | `String`            | Required | The fullname of the user to be charged                    |
-| amount                 | `Number`            | Required | The transaction amount in kobo                            |
+| amount                 | `Number`            | Required | The transaction amount                                    |
 | token                  | `String`            | Required | Your token or see above step to get yours                 |
 | onSuccess              | `Function`          | Optional | Callback when transaction is successful                   |
 | onClose                | `Function`          | Optional | Callback when transaction is closed of cancel             |
 | ref                    | `Object`            | Required | SDK payment Ref                                           |
 | payButton              | `Boolean`           | Optional | Show Payment Button                                       |
-| buttonText             | `String`            | Optional | Button Text. default: Hydrogen Pay                        |
+| buttonText             | `String`            | Optional | Button Text. Default: Hydrogen Pay                        |
 | buttonStyle            | `Object`            | Optional | Button style                                              |
 | buttontextStyles       | `Object`            | Optional | Button text style                                         |
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | endDate                | `String`            | Optional | Recurring Payment end date                                |
-| autoStart              | `Boolean`            | Optional | Automatically start the sdk                               |
+| autoStart              | `Boolean`           | Optional | Automatically start the sdk                               |
