@@ -65,7 +65,7 @@ export const HydrogenCheckout = forwardRef(
       "isAPI": false,
       "isRecurring":${payload.isRecurring},
       "frequency":${payload.frequency},
-      "CustomerName":"${payload.customerName}",
+      "CustomerName":"${payload.customerName}"
     }
 
     function onClose(e) {

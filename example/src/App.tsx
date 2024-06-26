@@ -42,7 +42,7 @@ export default function App() {
         email="test@mail.com" // REQUIRED
         customerName="John Doe" // REQUIRED
         meta="ewr34we4w" // OPTIONAL
-        token="E2E411B102072296C73F76339497FB8529FF552F0D6817E0F3B46A243961CA21" // REQUIRED
+        token="C1B70AB4DBFCF08720E22B009552BC8F4D81158FA0E0898CB9446B0F0DF59040" // REQUIRED
         description="Test description" // OPTIONAL
         currency="NGN" // REQUIRED
         frequency={1} // OPTIONAL
