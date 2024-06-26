@@ -47,7 +47,6 @@ export default function App() {
         currency="NGN" // REQUIRED
         frequency={1} // OPTIONAL
         isRecurring={false} // OPTIONAL
-        endDate={'2023-10-29'} // OPTIONAL
         onClose={(e) => onClose(e)} // OPTIONAL
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
