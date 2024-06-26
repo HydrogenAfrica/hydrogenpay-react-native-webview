@@ -1,6 +1,6 @@
 {
   "name": "h-webview",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "HydrogenPay's react native webview wrapper",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
