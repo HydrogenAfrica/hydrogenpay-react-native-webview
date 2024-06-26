@@ -52,7 +52,7 @@ export const HydrogenCheckout = forwardRef(
     <title>Hydrogen Pay</title>
   </head>
   <body>
-  <script src="https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1.js" module>
+  <script src="https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js" module>
   </script>
   <script>
     let paymentResponse;
@@ -65,7 +65,6 @@ export const HydrogenCheckout = forwardRef(
       "isAPI": false,
       "isRecurring":${payload.isRecurring},
       "frequency":${payload.frequency},
-      "endDate" : "${payload.endDate}",
       "CustomerName":"${payload.customerName}"
     }
 
@@ -92,7 +91,7 @@ export const HydrogenCheckout = forwardRef(
             onSuccess(checkPaymentStatus)
             clearInterval(checkStatus)
          }
-      }, 1000)
+      }, 2000)
 
   </script>
   </body>

@@ -215,5 +215,4 @@ export default function App() {
 | buttontextStyles       | `Object`            | Optional | Button text style                                         |
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
-| endDate                | `String`            | Optional | Recurring Payment end date                                |
 | autoStart              | `Boolean`           | Optional | Automatically start the sdk                               |
