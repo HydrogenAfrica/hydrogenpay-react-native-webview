@@ -55,6 +55,7 @@ export default function App() {
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
         autoStart={false} // OPTIONAL
+        mode="LIVE" //REQUIRED
       />
       <TouchableOpacity
         onPress={() => startPayment()}

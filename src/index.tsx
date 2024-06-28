@@ -35,6 +35,7 @@ interface PaymentPayload {
   buttontextStyles?: { [key: string]: string };
   buttonText?: string;
   autoStart?: boolean;
+  mode: 'LIVE' | 'TEST';
 }
 
 export const HydrogenCheckout = forwardRef(
@@ -52,7 +53,7 @@ export const HydrogenCheckout = forwardRef(
     <title>Hydrogen Pay</title>
   </head>
   <body>
-  <script src="https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js" module>
+  <script src="${payload.mode === 'LIVE' ? 'https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js' : 'https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1.js'}" module>
   </script>
   <script>
     let paymentResponse;

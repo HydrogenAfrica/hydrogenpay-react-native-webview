@@ -70,6 +70,7 @@ export default function App() {
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
         autoStart={true} // OPTIONAL
+        mode="TEST"
       />
     </View>
   );
@@ -122,6 +123,7 @@ export default function App() {
         onClose={(e) => onClose(e)} // OPTIONAL
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
+        mode="TEST"
       />
       <TouchableOpacity
         onPress={() => startPayment()}
@@ -189,6 +191,7 @@ export default function App() {
         buttonText="Hydrogen Pay Button" //OPTIONAL
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
+        mode="TEST"
       />
     </View>
   );
@@ -216,3 +219,4 @@ export default function App() {
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | autoStart              | `Boolean`           | Optional | Automatically start the sdk                               |
+| mode                   | `String`            | Required | Payment Mode  e.g LIVE, TEST                              |
