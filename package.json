@@ -1,6 +1,6 @@
 {
   "name": "hydrogenpay-react-native-webview",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "HydrogenPay's react native webview wrapper",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

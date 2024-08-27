@@ -42,7 +42,7 @@ export default function App() {
         email="test@mail.com" // REQUIRED
         customerName="John Doe" // REQUIRED
         meta="ewr34we4w" // OPTIONAL
-        token="C1B70AB4DBFCF08720E22B009552BC8F4D81158FA0E0898CB9446B0F0DF59040" // REQUIRED
+        apiKey="PK_TEST_cca53e0b3bc7847aff94502b8a585f84" // REQUIRED
         description="Test description" // OPTIONAL
         currency="NGN" // REQUIRED
         frequency={1} // OPTIONAL
@@ -55,9 +55,8 @@ export default function App() {
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
         autoStart={false} // OPTIONAL
-        mode="LIVE" //REQUIRED
       />
-      <TouchableOpacity
+      {/* <TouchableOpacity
         onPress={() => startPayment()}
         style={{
           marginLeft: 50,
@@ -71,7 +70,7 @@ export default function App() {
         }}
       >
         <Text>Use Start Payment Ref</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }

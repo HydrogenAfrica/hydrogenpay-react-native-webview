@@ -24,7 +24,7 @@ interface PaymentPayload {
   description?: string;
   redirectUrl?: string;
   meta?: string;
-  token: string;
+  token?: string;
   isRecurring?: boolean;
   frequency?: number;
   endDate?: string;
@@ -35,7 +35,8 @@ interface PaymentPayload {
   buttontextStyles?: { [key: string]: string };
   buttonText?: string;
   autoStart?: boolean;
-  mode: 'LIVE' | 'TEST';
+  mode?: 'LIVE' | 'TEST';
+  apiKey: string;
 }
 
 export const HydrogenCheckout = forwardRef(
@@ -53,7 +54,7 @@ export const HydrogenCheckout = forwardRef(
     <title>Hydrogen Pay</title>
   </head>
   <body>
-  <script src="${payload.mode === 'LIVE' ? 'https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js' : 'https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1.js'}" module>
+  <script src="https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js" module>
   </script>
   <script>
     let paymentResponse;
@@ -84,10 +85,10 @@ export const HydrogenCheckout = forwardRef(
       paymentResponse = await paymentResponse
     }
 
-    openDialogModal("${payload.token}")
+    openDialogModal("${payload.apiKey}")
 
     let checkStatus = setInterval(async function() {
-      const checkPaymentStatus = await handlePaymentStatus(paymentResponse, "${payload.token}");
+      const checkPaymentStatus = await handlePaymentStatus(paymentResponse, "${payload.apiKey}");
         if(checkPaymentStatus.status === "Paid"){
             onSuccess(checkPaymentStatus)
             clearInterval(checkStatus)

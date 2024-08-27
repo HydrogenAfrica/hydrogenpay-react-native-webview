@@ -11,7 +11,7 @@ Hydrogen React Native SDK allows you to accept payment using Hydrogen Pay
 Register for a merchant account on [Hydrogen Merchant Dashboard](https://dashboard.hydrogenpay.com) to get started.
 
 ```bash
-npm install --save  hydrogenpay-react-native-webview
+npm install --save hydrogenpay-react-native-webview
 npm install react-native-webview
 ```
 
@@ -26,7 +26,7 @@ If you have any problems, questions or suggestions, create an issue here or send
 
 ## Implementation
 
-You should already have your token, If not, go to [https://dashboard.hydrogenpay.com](https://dashboard.hydrogenpay.com).
+You should already have your api key, If not, go to [https://dashboard.hydrogenpay.com](https://dashboard.hydrogenpay.com).
 
 ### Usage 1 - Auto Start
 
@@ -63,14 +63,13 @@ export default function App() {
         email="test@mail.com" // REQUIRED
         customerName="John Doe" // REQUIRED
         meta="ewr34we4w" // OPTIONAL
-        token="E2E411B102072296C73F76339497FB8529FF552F0D6817E0F3B46A243961CA21" // REQUIRED
+        apiKey="PK_TEST_cca53e0b3bc7847aff94502b8a585f84" // REQUIRED
         description="Test description" // OPTIONAL
         currency="NGN" // REQUIRED
         onClose={(e) => onClose(e)} // OPTIONAL
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
         autoStart={true} // OPTIONAL
-        mode="TEST"
       />
     </View>
   );
@@ -117,13 +116,12 @@ export default function App() {
         email="test@mail.com" // REQUIRED
         customerName="John Doe" // REQUIRED
         meta="ewr34we4w" // OPTIONAL
-        token="E2E411B102072296C73F76339497FB8529FF552F0D6817E0F3B46A243961CA21" // REQUIRED
+        apiKey="PK_TEST_cca53e0b3bc7847aff94502b8a585f84" // REQUIRED
         description="Test description" // OPTIONAL
         currency="NGN" // REQUIRED
         onClose={(e) => onClose(e)} // OPTIONAL
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
-        mode="TEST"
       />
       <TouchableOpacity
         onPress={() => startPayment()}
@@ -181,7 +179,7 @@ export default function App() {
         email="test@mail.com" // REQUIRED
         customerName="John Doe" // REQUIRED
         meta="ewr34we4w" // OPTIONAL
-        token="E2E411B102072296C73F76339497FB8529FF552F0D6817E0F3B46A243961CA21" // REQUIRED
+        apiKey="PK_TEST_cca53e0b3bc7847aff94502b8a585f84" // REQUIRED
         description="Test description" // OPTIONAL
         currency="NGN" // REQUIRED
         onClose={(e) => onClose(e)} // OPTIONAL
@@ -191,7 +189,6 @@ export default function App() {
         buttonText="Hydrogen Pay Button" //OPTIONAL
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
-        mode="TEST"
       />
     </View>
   );
@@ -208,7 +205,7 @@ export default function App() {
 | description            | `String`            | Optional | The transaction description                               |
 | customerName           | `String`            | Required | The fullname of the user to be charged                    |
 | amount                 | `Number`            | Required | The transaction amount                                    |
-| token                  | `String`            | Required | Your token or see above step to get yours                 |
+| apiKey                 | `String`            | Required | Your LIVE or TEST apiKey or see above step to get yours                                   |
 | onSuccess              | `Function`          | Optional | Callback when transaction is successful                   |
 | onClose                | `Function`          | Optional | Callback when transaction is closed of cancel             |
 | ref                    | `Object`            | Required | SDK payment Ref                                           |
@@ -219,4 +216,3 @@ export default function App() {
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | autoStart              | `Boolean`           | Optional | Automatically start the sdk                               |
-| mode                   | `String`            | Required | Payment Mode  e.g LIVE, TEST                              |
