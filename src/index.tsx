@@ -37,6 +37,13 @@ interface PaymentPayload {
   autoStart?: boolean;
   mode?: 'LIVE' | 'TEST';
   apiKey: string;
+  transactionRef?: string;
+  metaData?: Array<{
+    fieldName: string;
+    fieldDefaultValue: string;
+    fieldKey: string;
+    fieldType: number;
+  }>;
 }
 
 export const HydrogenCheckout = forwardRef(
@@ -54,7 +61,7 @@ export const HydrogenCheckout = forwardRef(
     <title>Hydrogen Pay</title>
   </head>
   <body>
-  <script src="https://hydrogenshared.blob.core.windows.net/paymentgateway/paymentGatewayIntegration_v1PROD.js" module>
+  <script src="https://js.hydrogenpay.com/inline.js" module>
   </script>
   <script>
     let paymentResponse;
@@ -62,12 +69,14 @@ export const HydrogenCheckout = forwardRef(
       "amount": "${payload.amount}",
       "email": "${payload.email}",
       "currency": "${payload.currency}",
-      "description": "${payload.description}",
-      "meta": "${payload.meta}",
+      "description": "${payload.description || ''}",
+      "meta": "${payload.meta || ''}",
       "isAPI": false,
       "isRecurring":${payload.isRecurring},
       "frequency":${payload.frequency},
-      "CustomerName":"${payload.customerName}"
+      "CustomerName":"${payload.customerName || ''}",
+      "transactionRef": "${payload.transactionRef || ''}",
+      "metaData": ${JSON.stringify(payload.metaData || [])},
     }
 
     function onClose(e) {
