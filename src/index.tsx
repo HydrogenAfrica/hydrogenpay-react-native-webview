@@ -75,6 +75,7 @@ export const HydrogenCheckout = forwardRef(
       "isRecurring":${payload.isRecurring},
       "frequency":${payload.frequency},
       "CustomerName":"${payload.customerName || ''}",
+      "endDate": "${payload.endDate || ''}",
       "transactionRef": "${payload.transactionRef || ''}",
       "metaData": ${JSON.stringify(payload.metaData || [])},
     }

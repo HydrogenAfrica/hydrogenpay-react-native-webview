@@ -189,6 +189,9 @@ export default function App() {
         buttonText="Hydrogen Pay Button" // OPTIONAL
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
+        isRecurring={false} // OPTIONAL
+        frequency={1} // OPTIONAL
+        endDate={"2025-11-01"} // OPTIONAL but (REQUIRED if isRecurring === true)
         transactionRef={`txn_${new Date().getTime()}`} // OPTIONAL
         metaData={[
 			   // 	{ fieldName: "uniqueId", fieldDefaultValue: "DevStore14", fieldKey: "uniqueId", fieldType: 1 },
