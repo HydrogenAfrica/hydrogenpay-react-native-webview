@@ -1,5 +1,5 @@
 <p align="center">
-<img width="400" valign="top" src="https://hydrogenpay.com/wp-content/uploads/2023/05/logo.png" data-canonical-src="https://hydrogenpay.com/wp-content/uploads/2023/05/logo.png" style="max-width:100%; ">
+<img width="400" valign="top" src="https://hydrogenshared.blob.core.windows.net/shared/hydrogen-logo.png" data-canonical-src="https://hydrogenshared.blob.core.windows.net/shared/hydrogen-logo.png" style="max-width:100%; ">
 </p>
 
 # Hydrogen React Native WebView SDK
@@ -186,9 +186,16 @@ export default function App() {
         onSuccess={(e) => onSuccess(e)} // OPTIONAL
         ref={hydrogenPayRef} // REQUIRED
         payButton={true} // OPTIONAL
-        buttonText="Hydrogen Pay Button" //OPTIONAL
+        buttonText="Hydrogen Pay Button" // OPTIONAL
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
+        isRecurring={false} // OPTIONAL
+        frequency={1} // OPTIONAL
+        endDate={"2025-11-01"} // OPTIONAL but (REQUIRED if isRecurring === true)
+        transactionRef={`txn_${new Date().getTime()}`} // OPTIONAL
+        metaData={[
+			   // 	{ fieldName: "uniqueId", fieldDefaultValue: "DevStore14", fieldKey: "uniqueId", fieldType: 1 },
+			 ]}
       />
     </View>
   );
@@ -216,3 +223,6 @@ export default function App() {
 | isRecurring            | `boolean`           | Optional | Recurring Payment                                         |
 | frequency              | `String`            | Optional | Recurring Payment frequency                               |
 | autoStart              | `Boolean`           | Optional | Automatically start the sdk                               |
+| endDate      | `String`   | Optional | Recurring Payment End Date. OPTIONAL but (REQUIRED when isRecurring = true) |
+| transactionRef      | `String`   | Optional | Custom Transaction reference |
+| metaData      | `Array`   | Optional | Transaction meta data |

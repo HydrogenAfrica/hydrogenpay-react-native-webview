@@ -33,8 +33,6 @@ export default function App() {
     // setTimeout(() => hydrogenPayRef?.current?.closePayment(), 2000);
   };
 
-
-
   return (
     <View style={styles.container}>
       <HydrogenCheckout
@@ -55,6 +53,15 @@ export default function App() {
         buttonStyle={{}} // OPTIONAL
         buttontextStyles={{}} // OPTIONAL
         autoStart={false} // OPTIONAL
+        transactionRef={`txn_${new Date().getTime()}`} // OPTIONAL
+        // metaData={[
+        //   {
+        //     fieldName: 'uniqueId',
+        //     fieldDefaultValue: 'DevStore14',
+        //     fieldKey: 'uniqueId',
+        //     fieldType: 1, // 1 for text, 2 for select, 3 for checkbox
+        //   },
+        // ]} // OPTIONAL
       />
       {/* <TouchableOpacity
         onPress={() => startPayment()}
